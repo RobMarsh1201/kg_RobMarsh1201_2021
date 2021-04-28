@@ -1,10 +1,14 @@
+
+//Array that holds the phoentic value of each number at the correct position
 const phoneticValue = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']
 
+//Final string that holds all phoentic parameter equivelents
+let finalPhoenticString = ''
 // Read parameters and iterate, skipping first two params
 for (var i = 2; i < process.argv.length; i++)
 {
     //Initlaize string to be printed to console
-    let numeralString = ''
+    let workingString = ''
 
     //Split a string into a array of characters
     const splitNumber = process.argv[i].split('');
@@ -13,8 +17,11 @@ for (var i = 2; i < process.argv.length; i++)
     {
         // March through array, using the value of each number to call the String numeral array,
         // and assign its phonetic value from its parseInt
-        numeralString += (phoneticValue[parseInt(splitNumber[k])]);
+        workingString += (phoneticValue[parseInt(splitNumber[k])]);
     }
 
-    console.log(numeralString);
+    finalPhoenticString += workingString + ","
+
 }
+
+console.log(finalPhoenticString);
