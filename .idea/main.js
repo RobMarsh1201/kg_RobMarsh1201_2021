@@ -5,10 +5,10 @@ const phoneticValue = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Se
 //Final string that holds all phoentic parameter equivelents
 let finalPhoenticString = ''
 
-// Read parameters and iterate, skipping first two params
+// Read parameters and iterate, skipping first two executable and filelocation parameters
 for (var i = 2; i < process.argv.length; i++)
 {
-    //Initlaize string to be printed to console
+    //Initlaize string to hold phoeneticValues of strings
     let workingString = ''
 
     //Split a string into a array of characters
